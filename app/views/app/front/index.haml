@@ -1,1 +1,265 @@
-%h1 hola front 
+%header.main_menu.home_menu
+  .container
+    .row
+      .col-lg-12
+        %nav.navbar.navbar-expand-lg.navbar-light
+          %a.navbar-brand{href: "index.html"}
+            %img{alt: "logo", src: "assets/app/logo.png"}/
+          %button.navbar-toggler{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarNav", "data-toggle" => "collapse", type: "button"}
+            %span.navbar-toggler-icon
+          #navbarNav.collapse.navbar-collapse.main-menu-item
+            %ul.navbar-nav
+              %li.nav-item.active
+                %a.nav-link{href: "index.html"}
+                  Home
+                  %span.sr-only (current)
+              %li.nav-item
+                %a.nav-link{href: "about.html"} about
+              %li.nav-item
+                %a.nav-link{href: "Properties.html"} Properties
+              %li.nav-item
+                %a.nav-link.page-scroll{href: "blog.html"} Blog
+              %li.nav-item.dropdown
+                %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", href: "#", role: "button"}
+                  Pages
+                .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
+                  %a.dropdown-item{href: "single-blog.html"} Single blog
+                  %a.dropdown-item{href: "elements.html"} Elements
+              %li.nav-item
+                %a.nav-link{href: "contact.html"} Contact us
+          .btn_1.d-none.d-lg-block
+            %a.float-right{href: "#"} Submit property
+%section.banner_part
+  .container
+    .row.align-content-center
+      .col-lg-6
+        .banner_text.aling-items-center
+          .banner_text_iner
+            %h5 Beautiful investments
+            %h2
+              Everyone Deserves
+              the Opportunity of
+              the Home
+            %p
+              Enim a, scelerisque aliquet vivamus neque diam sed at pede do laos orci. Potenti vel
+              in sagittis nulla augue vitae et tempus torquent dicid Lacinia neque mus maleware
+              poside
+            %a.btn_1.banner_btn{href: "#"} View Property
+            .d-none.d-xl-block.banner_social_icon
+              %ul.list-inline
+                %li.list-inline-item
+                  %a{href: "#"}
+                    %span.ti-facebook>
+                    facebook
+                  %span.dot
+                    %i.fas.fa-circle
+                %li.list-inline-item
+                  %a{href: "#"}
+                    %span.ti-twitter-alt>
+                    twitter
+                  %span.dot
+                    %i.fas.fa-circle
+                %li.list-inline-item
+                  %a{href: "#"}
+                    %span.ti-instagram>
+                    instagram
+.apartment_part
+  .container
+    .row.justify-content-between.align-content-center
+      .col-md-8.col-lg-7
+        .section_tittle
+          %h1
+            Provide The
+            %br/
+            Beautiful Apartment
+      .col-md-4.col-lg-5
+        .view_more_btn.float-right.d-none.d-md-block
+          %a.btn_2{href: "#"}
+            Read More
+            %span.ti-arrow-right
+    .row
+      .col-md-4.col-lg-4
+        .single_appartment_part
+          .appartment_img
+            %img{alt: "", src: "assets/app/appertment_1.png"}/
+            .single_appartment_text
+              %h3 $1,235632
+              %p
+                %span.ti-location-pin
+                384 Treeline Park, San Antonio, TX
+          .single_appartment_content
+            %a.love_us{href: ""}
+              %span.ti-heart
+            %p Home, Apartment
+            %a{href: "#"}
+              %h4 Detached House For Sale
+            %ul.list-unstyled
+              %li
+                %a{href: ""}
+                  %span.flaticon-bath
+                04
+              %li
+                %a{href: ""}
+                  %span.flaticon-bed
+                03
+              %li
+                %a{href: ""}
+                  %span.flaticon-frame
+                2400 sqft
+      .col-md-4.col-lg-4
+        .single_appartment_part
+          .appartment_img
+            %img{alt: "", src: "assets/app/appertment_2.png"}/
+            .single_appartment_text
+              %h3 $1,235632
+              %p
+                %span.ti-location-pin
+                384 Treeline Park, San Antonio, TX
+          .single_appartment_content
+            %a.love_us{href: ""}
+              %span.ti-heart
+            %p Home, Apartment
+            %a{href: "#"}
+              %h4 Detached House For Sale
+            %ul.list-unstyled
+              %li
+                %a{href: ""}
+                  %span.flaticon-bath
+                04
+              %li
+                %a{href: ""}
+                  %span.flaticon-bed
+                03
+              %li
+                %a{href: ""}
+                  %span.flaticon-frame
+                2400 sqft
+      .col-md-4.col-lg-4
+        .single_appartment_part
+          .appartment_img
+            %img{alt: "", src: "assets/app/appertment_3.png"}/
+            .single_appartment_text
+              %h3 $1,235632
+              %p
+                %span.ti-location-pin
+                384 Treeline Park, San Antonio, TX
+          .single_appartment_content
+            %a.love_us{href: ""}
+              %span.ti-heart
+            %p Home, Apartment
+            %a{href: "#"}
+              %h4 Detached House For Sale
+            %ul.list-unstyled
+              %li
+                %a{href: ""}
+                  %span.flaticon-bath
+                04
+              %li
+                %a{href: ""}
+                  %span.flaticon-bed
+                03
+              %li
+                %a{href: ""}
+                  %span.flaticon-frame
+                2400 sqft
+/ ::apartment_part end::
+/ ::room_part end::
+.room_part
+  .container-fluid
+    .row
+      .col-md-6.col-lg-6
+        .room_1
+          %img{alt: "", src: "assets/app/room_1.png"}/
+          .room_text_1
+            %h1
+              Beginning own
+              %br/
+              light divided male
+              %br/
+              is light
+            %a.btn_2{href: "#"}
+              Read More
+              %span.ti-arrow-right
+      .col-md-6.col-lg-6
+        .room_2
+          %img{alt: "", src: "assets/app/room_2.png"}/
+          .room_text_2
+            %h1
+              Beginning own
+              %br/
+              light divided male
+              %br/
+              is light
+            %a.btn_2{href: "#"}
+              Read More
+              %span.ti-arrow-right
+%footer.footer_part
+  .container
+    .row
+      .col-sm-6.col-lg-3
+        .single_footer_part
+          %h4 About Us
+          %p Heaven fruitful doesn't over lesser days appear creeping seasons so behold bearing days open
+          %a.footer_logo{href: "index.html"}
+            %img{alt: "#", src: "assets/app/footer_logo.png"}/
+      .col-sm-6.col-lg-3
+        .single_footer_part
+          %h4 Contact Info
+          %p
+            Address :Your address goes
+            here, your demo address.
+          %p Phone : +8880 44338899
+          %p Email : info@colorlib.com
+      .col-sm-6.col-lg-3
+        .single_footer_part
+          %h4 Important Link
+          %ul.list-unstyled
+            %li
+              %a{href: ""} WHMCS-bridge
+            %li
+              %a{href: ""} Search Domain
+            %li
+              %a{href: ""} My Account
+            %li
+              %a{href: ""} Shopping Cart
+            %li
+              %a{href: ""} Our Shop
+              Our Shop
+      .col-sm-6.col-lg-3
+        .single_footer_part
+          %h4 Newsletter
+          %p
+            Heaven fruitful doesn't over lesser in days. Appear creeping seasons deve behold bearing days open
+          .mail_part
+            %input.placeholder.hide-on-focus{placeholder: "Email Address", type: "text"}/
+            %a.email_icon{href: ""}
+              %i.far.fa-paper-plane
+    %hr/
+    .row
+      .col-sm-6.col-lg-6
+        .copyright_text
+          %p
+            / Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+            Copyright ©
+            :javascript
+              document.write(new Date().getFullYear());
+            All rights reserved | This template is made with
+            %i.fa.fa-heart{"aria-hidden" => "true"}
+            by
+            %a{href: "https://colorlib.com", target: "_blank"} Colorlib
+            / Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+      .col-sm-6.col-lg-6
+        .footer_icon
+          %ul.list-unstyled
+            %li
+              %a.single_social_icon{href: "#"}
+                %i.fab.fa-facebook-f
+            %li
+              %a.single_social_icon{href: "#"}
+                %i.fab.fa-twitter
+            %li
+              %a.single_social_icon{href: "#"}
+                %i.fas.fa-globe
+            %li
+              %a.single_social_icon{href: "#"}
+                %i.fab.fa-behance
