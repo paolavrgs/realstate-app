@@ -1,0 +1,23 @@
+.container-login {
+  align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login{
+  width: 25%;
+  h2 {
+    text-align: center;
+  }
+}
+
+.email, .password {
+  width: 100% !important;
+  margin: 5px 0px;
+}
+
+.btn-login{
+  width: 100%;
+}
