@@ -1,0 +1,4 @@
+%h1 hola admin 
+- if user_signed_in?
+  .btn_1.d-none.d-lg-block
+    = link_to "Cerrar", destroy_user_session_path, method: :delete

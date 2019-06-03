@@ -27,9 +27,9 @@
                   %a.dropdown-item{href: "elements.html"} Elements
               %li.nav-item
                 %a.nav-link{href: "contact.html"} Contact us
-          - if admin_signed_in?
+          - if user_signed_in?
             .btn_1.d-none.d-lg-block
-              = link_to "Cerrar", destroy_admin_session_path, method: :delete
+              = link_to "Cerrar", destroy_user_session_path, method: :delete
 %section.banner_part
   .container
     .row.align-content-center
