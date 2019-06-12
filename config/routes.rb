@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   scope module: :app do
     get '/', to: 'front#index', as: :root
   end
-
-   namespace :admins do
+  
+  namespace :admin do
     get '/', to: 'admin#root'
     get '/dashboard', to: 'dashboard#index', as: :dashboard
+    resources :products
   end
 end

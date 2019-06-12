@@ -9,8 +9,8 @@ default: &default
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   :host: localhost
-  :username: gladibethf
-  :password: 1234
+  :username: paola
+  :password: 7061
     
 
 development:
