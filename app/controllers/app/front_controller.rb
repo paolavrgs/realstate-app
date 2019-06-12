@@ -3,6 +3,7 @@ module App
     layout 'app/layouts/application'
 
     def index
+      @products = Product.all
     end
 
    end

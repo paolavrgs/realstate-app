@@ -20,15 +20,15 @@
             .logo-image-small
               %img{src: "../assets/img/logo-small.png"}/
           %a.simple-text.logo-normal{href: "http://www.creative-tim.com"}
-            Creative Tim
+            MG INMOBILIARIAS
         .sidebar-wrapper
           %ul.nav
-            %li.active
-              %a{href: "/admin/dashboard"}
+            %li{ class: "#{controller_name.eql?('dashboard') ? 'active' : ''}" }
+              = link_to admin_dashboard_path, "data-method": "get" do
                 %i.nc-icon.nc-bank
                 %p Dashboard
-            %li
-              %a{href: "/admin/products"}
+            %li{ class: "#{controller_name.eql?('products') ? 'active' : ''}" }
+              = link_to admin_products_path, "data-method": "get" do
                 %i.nc-icon.nc-single-02
                 %p Servicios Inmobiliarios
             -# %li

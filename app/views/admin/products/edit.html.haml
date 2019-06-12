@@ -2,6 +2,6 @@
 
 = render 'form'
 
-= link_to 'Show', @product
+= link_to 'Show', admin_product_path(@product), "data-method": "get"
 \|
-= link_to 'Back', admin_products_path
+= link_to 'Back', admin_products_path, "data-method": "get"
