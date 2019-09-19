@@ -10,73 +10,36 @@
           #navbarNav.collapse.navbar-collapse.main-menu-item
             %ul.navbar-nav
               %li.nav-item.active
-                %a.nav-link{href: "index.html"}
-                  Home
+                %a.nav-link{href: "/"}
+                  Inicio
                   %span.sr-only (current)
               %li.nav-item
-                %a.nav-link{href: "about.html"} about
+                %a.nav-link{href: "/about"} Nosotros
               %li.nav-item
-                %a.nav-link{href: "Properties.html"} Properties
-              %li.nav-item
-                %a.nav-link.page-scroll{href: "blog.html"} Blog
-              %li.nav-item.dropdown
-                %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", href: "#", role: "button"}
-                  Pages
-                .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
-                  %a.dropdown-item{href: "single-blog.html"} Single blog
-                  %a.dropdown-item{href: "elements.html"} Elements
-              %li.nav-item
-                %a.nav-link{href: "contact.html"} Contact us
-          - if user_signed_in?
-            .btn_1.d-none.d-lg-block
-              = link_to "Cerrar", destroy_user_session_path, method: :delete
+                %a.nav-link{href: "/products"} Propiedades
 %section.banner_part
   .container
     .row.align-content-center
       .col-lg-6
         .banner_text.aling-items-center
           .banner_text_iner
-            %h5 Beautiful investments
             %h2
-              Everyone Deserves
-              the Opportunity of
-              the Home
-            %p
-              Enim a, scelerisque aliquet vivamus neque diam sed at pede do laos orci. Potenti vel
-              in sagittis nulla augue vitae et tempus torquent dicid Lacinia neque mus maleware
-              poside
+              La Verdadera Asesoría Inmobiliaria
             %a.btn_1.banner_btn{href: "#"} View Property
             .d-none.d-xl-block.banner_social_icon
-              %ul.list-inline
-                %li.list-inline-item
-                  %a{href: "#"}
-                    %span.ti-facebook>
-                    facebook
-                  %span.dot
-                    %i.fas.fa-circle
-                %li.list-inline-item
-                  %a{href: "#"}
-                    %span.ti-twitter-alt>
-                    twitter
-                  %span.dot
-                    %i.fas.fa-circle
-                %li.list-inline-item
-                  %a{href: "#"}
-                    %span.ti-instagram>
-                    instagram
 .apartment_part
   .container
     .row.justify-content-between.align-content-center
       .col-md-8.col-lg-7
         .section_tittle
           %h1
-            Provide The
+            Busca, encuentra y disfruta
             %br/
-            Beautiful Apartment
+            de tu nueva propiedad hoy.
       .col-md-4.col-lg-5
         .view_more_btn.float-right.d-none.d-md-block
           %a.btn_2{href: "#"}
-            Read More
+            Ver todos
             %span.ti-arrow-right
     .row
       .col-md-4.col-lg-4
@@ -202,7 +165,7 @@
           %h4 About Us
           %p Heaven fruitful doesn't over lesser days appear creeping seasons so behold bearing days open
           %a.footer_logo{href: "index.html"}
-            %img{alt: "#", src: "assets/app/footer_logo.png"}/
+            %img{alt: "#", src: "assets/app/logo.png"}/
       .col-sm-6.col-lg-3
         .single_footer_part
           %h4 Contact Info

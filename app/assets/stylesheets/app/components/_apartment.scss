@@ -62,6 +62,25 @@
             }
 
         }
+
+        .single_appartment_text-product {
+            position: absolute;
+            bottom: 40px;
+            left: 15px;
+            @include transform_time(0.5s);
+            z-index: 9;
+            h3{
+                font-size: 24px;
+                font-weight: 800;
+                margin-bottom: 15px;
+                color: $white_color;
+            }
+            p{
+                font-size: 13px;
+                color: $white_color;
+            }
+
+        }
         img{
             width: 100%;
         }

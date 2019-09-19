@@ -1,0 +1,26 @@
+-# = link_to 'New Cotization', new_admin_cotization_path, "data-method": "get", class: "btn btn-primary btn-round"
+
+.card
+  .card-header
+    %h4.card-title Cotizaciones
+  .card-body
+    .table-responsive
+      %table.table
+        %thead.text-primary
+          %th Propiedad
+          %th Nombre
+          %th Correo electrónico
+          %th Teléfono
+          %th Mensaje
+          %th.text-right Acciones
+        %tbody
+          - @cotizations.each do |cotization|
+            %tr
+              %td= cotization.product.title
+              %td= cotization.name
+              %td= cotization.email
+              %td= cotization.phone
+              %td= cotization.message
+              %td= link_to 'Show', admin_cotization_path(cotization), "data-method": "get"
+              %td= link_to 'Edit', edit_admin_cotization_path(cotization), "data-method": "get"
+              %td= link_to 'Destroy', admin_cotization_path(cotization), method: :delete, data: { confirm: 'Are you sure?' }, "data-method": "get"

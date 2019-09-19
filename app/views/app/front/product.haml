@@ -1,0 +1,146 @@
+%body
+  %header.main_menu
+    .container
+      .row
+        .col-lg-12
+          %nav.navbar.navbar-expand-lg.navbar-light
+            %a.navbar-brand{href: "/"}
+              %img{alt: "logo", src: "/assets/app/logo.png"}/
+            %button.navbar-toggler{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarNav", "data-toggle" => "collapse", type: "button"}
+              %span.navbar-toggler-icon
+            #navbarNav.collapse.navbar-collapse.main-menu-item
+              %ul.navbar-nav
+                %li.nav-item.active
+                  %a.nav-link{href: "/"}
+                    Inicio
+                    %span.sr-only (current)
+                %li.nav-item
+                  %a.nav-link{href: "/about"} Nosotros
+                %li.nav-item
+                  %a.nav-link{href: "/products"} Propiedades
+.apartment_part.pb-5.pt-5
+  .container
+    .row
+      .col-md-6.col-lg-6
+        .single_appartment_part
+          .appartment_img
+            = image_tag url_for(@product.image)
+      .col-md-6.col-lg-6
+        .section_tittle
+          %h1
+            = @product.title
+        .single_appartment_part
+          %h3 $ 1000
+          %h4= @product.address
+          .card.card-user
+            .card-footer
+              %h5 Detalle:
+              %hr/
+              .button-container
+                .row
+                  .col-lg-3.col-md-6.col-6.ml-auto
+                    %h5
+                      = @product.sqft
+                      %br/
+                      %small Metros Cuadrados
+                  .col-lg-4.col-md-6.col-6.ml-auto.mr-auto
+                    %h5
+                      2GB
+                      %br/
+                      %small Used
+                  .col-lg-3.mr-auto
+                    %h5
+                      24,6$
+                      %br/
+                      %small Spent
+      .col-lg-12.mt-5
+        .section_tittle
+          %h1 Cotiza ahora!
+        = form_for @cotization do |f|
+          .row
+            = f.hidden_field :product_id, value: @product.id
+            .col-sm-6
+              .form-group
+                = f.text_field :name, placeholder: 'Nombre', class: 'form-control placeholder hide-on-focus'
+            .col-sm-6
+              .form-group
+                = f.text_field :email, placeholder: 'Correo electrónico', class: 'form-control placeholder hide-on-focus'
+            .col-sm-6
+              .form-group
+                = f.text_field :phone, placeholder: 'Teléfono', class: 'form-control placeholder hide-on-focus'
+            .col-sm-6
+              .form-group
+                = f.text_field :message, placeholder: 'Mensaje', class: 'form-control placeholder hide-on-focus'
+          .form-group.mt-3
+            %button.button.button-contactForm{type: "submit"} Cotizar
+/ ::apartment_part end::
+%footer.footer_part
+  .container
+    .row
+      .col-sm-6.col-lg-3
+        .single_footer_part
+          %h4 About Us
+          %p Heaven fruitful doesn't over lesser days appear creeping seasons so behold bearing days open
+          %a.footer_logo{href: "index.html"}
+            %img{alt: "#", src: "assets/app/logo.png"}/
+      .col-sm-6.col-lg-3
+        .single_footer_part
+          %h4 Contact Info
+          %p
+            Address :Your address goes
+            here, your demo address.
+          %p Phone : +8880 44338899
+          %p Email : info@colorlib.com
+      .col-sm-6.col-lg-3
+        .single_footer_part
+          %h4 Important Link
+          %ul.list-unstyled
+            %li
+              %a{href: ""} WHMCS-bridge
+            %li
+              %a{href: ""} Search Domain
+            %li
+              %a{href: ""} My Account
+            %li
+              %a{href: ""} Shopping Cart
+            %li
+              %a{href: ""} Our Shop
+              Our Shop
+      .col-sm-6.col-lg-3
+        .single_footer_part
+          %h4 Newsletter
+          %p
+            Heaven fruitful doesn't over lesser in days. Appear creeping seasons deve behold bearing days open
+          .mail_part
+            %input.placeholder.hide-on-focus{placeholder: "Email Address", type: "text"}/
+            %a.email_icon{href: ""}
+              %i.far.fa-paper-plane
+    %hr/
+    .row
+      .col-sm-6.col-lg-6
+        .copyright_text
+          %p
+            / Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+            Copyright ©
+            :javascript
+              document.write(new Date().getFullYear());
+            All rights reserved | This template is made with
+            %i.fa.fa-heart{"aria-hidden" => "true"}
+            by
+            %a{href: "https://colorlib.com", target: "_blank"} Colorlib
+            / Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+      .col-sm-6.col-lg-6
+        .footer_icon
+          %ul.list-unstyled
+            %li
+              %a.single_social_icon{href: "#"}
+                %i.fab.fa-facebook-f
+            %li
+              %a.single_social_icon{href: "#"}
+                %i.fab.fa-twitter
+            %li
+              %a.single_social_icon{href: "#"}
+                %i.fas.fa-globe
+            %li
+              %a.single_social_icon{href: "#"}
+                %i.fab.fa-behance

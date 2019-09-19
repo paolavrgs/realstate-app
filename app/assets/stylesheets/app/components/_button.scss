@@ -32,8 +32,8 @@
 	text-transform: capitalize;
 	@include transform_time(.5s);
 	&:hover{
-		background-color: #d8b25a;
-		border: 2px solid #d8b25a;
+		background-color: #a8cf45;
+		border: 2px solid #a8cf45;
 		color: $white_color;
 		a{
 			color: $white_color;

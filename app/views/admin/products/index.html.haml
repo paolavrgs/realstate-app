@@ -1,8 +1,8 @@
-= link_to 'New Product', new_admin_product_path, "data-method": "get"
+= link_to 'Nuevo servicio o propiedad', new_admin_product_path, "data-method": "get", class: "btn btn-primary btn-round"
 
 .card
   .card-header
-    %h4.card-title Detalle del Servicio
+    %h4.card-title Servicios
   .card-body
     .table-responsive
       %table.table
@@ -15,7 +15,8 @@
         %tbody
           - @products.each do |product|
             %tr
-              %td= product.image
+              %td{style:'width:50px'}
+                = image_tag url_for(product.image)
               %td= product.title
               %td= product.address
               %td= product.sqft

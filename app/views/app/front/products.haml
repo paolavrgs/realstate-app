@@ -1,0 +1,130 @@
+%header.main_menu.home_menu{ style: 'position:relative;' }
+  .container
+    .row
+      .col-lg-12
+        %nav.navbar.navbar-expand-lg.navbar-light
+          %a.navbar-brand{href: "index.html"}
+            %img{alt: "logo", src: "assets/app/logo.png"}/
+          %button.navbar-toggler{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarNav", "data-toggle" => "collapse", type: "button"}
+            %span.navbar-toggler-icon
+          #navbarNav.collapse.navbar-collapse.main-menu-item
+            %ul.navbar-nav
+              %li.nav-item.active
+                %a.nav-link{href: "/"}
+                  Inicio
+                  %span.sr-only (current)
+              %li.nav-item
+                %a.nav-link{href: "/about"} Nosotros
+              %li.nav-item
+                %a.nav-link{href: "/products"} Propiedades
+.apartment_part.pb-5.pt-5
+  .container
+    .row.justify-content-between.align-content-center
+      .col-md-8.col-lg-7
+        .section_tittle
+          %h1
+            Busca, encuentra y disfruta
+            %br/
+            de tu nueva propiedad hoy.
+    .row
+      - @products.each do |product|
+        .col-md-4.col-lg-4
+          .single_appartment_part
+            .appartment_img
+              = image_tag url_for(product.image)
+              .single_appartment_text
+                %h3 $1,235632
+                %p
+                  %span.ti-location-pin
+                  = product.address
+            .single_appartment_content
+              %a.love_us{href: "/product/#{product.id}"}
+                %span.ti-heart
+              %p Home, Apartment
+              %a{href: "#"}
+                %h4= product.title
+              %ul.list-unstyled
+                %li
+                  %a{href: ""}
+                    %span.flaticon-bath
+                  04
+                %li
+                  %a{href: ""}
+                    %span.flaticon-bed
+                  03
+                %li
+                  %a{href: ""}
+                    %span.flaticon-frame
+                  = product.sqft
+                  Mts2
+/ ::apartment_part end::
+%footer.footer_part
+  .container
+    .row
+      .col-sm-6.col-lg-3
+        .single_footer_part
+          %h4 About Us
+          %p Heaven fruitful doesn't over lesser days appear creeping seasons so behold bearing days open
+          %a.footer_logo{href: "index.html"}
+            %img{alt: "#", src: "assets/app/logo.png"}/
+      .col-sm-6.col-lg-3
+        .single_footer_part
+          %h4 Contact Info
+          %p
+            Address :Your address goes
+            here, your demo address.
+          %p Phone : +8880 44338899
+          %p Email : info@colorlib.com
+      .col-sm-6.col-lg-3
+        .single_footer_part
+          %h4 Important Link
+          %ul.list-unstyled
+            %li
+              %a{href: ""} WHMCS-bridge
+            %li
+              %a{href: ""} Search Domain
+            %li
+              %a{href: ""} My Account
+            %li
+              %a{href: ""} Shopping Cart
+            %li
+              %a{href: ""} Our Shop
+              Our Shop
+      .col-sm-6.col-lg-3
+        .single_footer_part
+          %h4 Newsletter
+          %p
+            Heaven fruitful doesn't over lesser in days. Appear creeping seasons deve behold bearing days open
+          .mail_part
+            %input.placeholder.hide-on-focus{placeholder: "Email Address", type: "text"}/
+            %a.email_icon{href: ""}
+              %i.far.fa-paper-plane
+    %hr/
+    .row
+      .col-sm-6.col-lg-6
+        .copyright_text
+          %p
+            / Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+            Copyright ©
+            :javascript
+              document.write(new Date().getFullYear());
+            All rights reserved | This template is made with
+            %i.fa.fa-heart{"aria-hidden" => "true"}
+            by
+            %a{href: "https://colorlib.com", target: "_blank"} Colorlib
+            / Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
+      .col-sm-6.col-lg-6
+        .footer_icon
+          %ul.list-unstyled
+            %li
+              %a.single_social_icon{href: "#"}
+                %i.fab.fa-facebook-f
+            %li
+              %a.single_social_icon{href: "#"}
+                %i.fab.fa-twitter
+            %li
+              %a.single_social_icon{href: "#"}
+                %i.fas.fa-globe
+            %li
+              %a.single_social_icon{href: "#"}
+                %i.fab.fa-behance

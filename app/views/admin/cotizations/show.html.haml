@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @cotization.name
+%p
+  %b Email:
+  = @cotization.email
+%p
+  %b Phone:
+  = @cotization.phone
+%p
+  %b Message:
+  = @cotization.message
+%p
+  %b Product:
+  = @cotization.product_id
+
+= link_to 'Edit', edit_cotization_path(@cotization)
+\|
+= link_to 'Back', cotizations_path

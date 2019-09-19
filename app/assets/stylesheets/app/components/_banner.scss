@@ -14,6 +14,7 @@
         background-image: url(banner_overlay.png);
         background-repeat: no-repeat;
         background-size: cover;
+        filter: hue-rotate(250deg);
         @media #{$small_mobile}{
             display: none;
         }

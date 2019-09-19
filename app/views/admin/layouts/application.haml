@@ -18,7 +18,7 @@
         .logo
           %a.simple-text.logo-mini{href: "http://www.creative-tim.com"}
             .logo-image-small
-              %img{src: "../assets/img/logo-small.png"}/
+              %img{src: "/assets/app/logo.png"}/
           %a.simple-text.logo-normal{href: "http://www.creative-tim.com"}
             MG INMOBILIARIAS
         .sidebar-wrapper
@@ -31,6 +31,10 @@
               = link_to admin_products_path, "data-method": "get" do
                 %i.nc-icon.nc-single-02
                 %p Servicios Inmobiliarios
+            %li{ class: "#{controller_name.eql?('cotizations') ? 'active' : ''}" }
+              = link_to admin_cotizations_path, "data-method": "get" do
+                %i.nc-icon.nc-single-02
+                %p Cotizaciones
             -# %li
             -#   %a{href: "./map.html"}
             -#     %i.nc-icon.nc-pin-3

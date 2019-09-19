@@ -1,7 +1,7 @@
 .col-md-8
   .card.card-user
     .card-header
-      %h5.card-title Edit Profile
+      %h5.card-title Nuevo servicio o propiedad
     .card-body
       = form_for [:admin, @product] do |f|
         - if @product.errors.any?
@@ -20,7 +20,7 @@
           .col-md-6.pr-1
             .form-group
               = f.label :image
-              = f.text_field :image, class: 'form-control'
+              = f.file_field :image, class: 'form-control'
           .col-md-6.pr-1
             .form-group
               = f.label :address
@@ -29,8 +29,8 @@
             .form-group
               = f.label :sqft
               = f.number_field :sqft, class: 'form-control'
-        .actions
+        -# .actions
           = f.submit 'Save'
         .row
           .update.ml-auto.mr-auto
-            %button.btn.btn-primary.btn-round{type: "submit"} Update Profile
+            %button.btn.btn-primary.btn-round{type: "submit"} Guardar
