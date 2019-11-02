@@ -13,7 +13,7 @@ gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 gem 'haml-rails', '1.0'
 gem 'haml', '5.0.4'
-gem 'devise', '4.5'
+gem 'devise', '4.7.1'
 
 
 gem 'rolify', '5.2'
